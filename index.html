@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build Your Own Superhero</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <h1>Build Your Own Superhero</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#design-section">Design Your Superhero Costume</a></li>
+          <li><a href="#power-section">Create Your Superhero Powers</a></li>
+          <li><a href="#share-section">Share Your Superhero</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="design-section">
+        <h2>Design Your Superhero Costume</h2>
+        <div class="color-selection">
+          <h3>Select Your Costume Color:</h3>
+          <input type="color" id="costume-color" />
+        </div>
+        <div class="pattern-selection">
+          <h3>Select Your Costume Pattern:</h3>
+          <select id="costume-pattern">
+            <option value="">--Select--</option>
+            <option value="stripes">Stripes</option>
+            <option value="dots">Dots</option>
+            <option value="checkerboard">Checkerboard</option>
+          </select>
+        </div>
+        <div class="accessory-selection">
+          <h3>Select Your Accessories:</h3>
+          <label
+            ><input type="checkbox" name="accessory" value="cape" />Cape</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="accessory"
+              value="boots"
+            />Boots</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="accessory"
+              value="gloves"
+            />Gloves</label
+          >
+          <label
+            ><input type="checkbox" name="accessory" value="mask" />Mask</label
+          >
+        </div>
+        <button onclick="previewCostume()">Preview Costume</button>
+        <div class="preview-area"></div>
+      </section>
+      <section id="power-section">
+        <h2>Create Your Superhero Powers</h2>
+        <div class="attribute-selection">
+          <h3>Select Your Attributes:</h3>
+          <label
+            ><input
+              type="checkbox"
+              name="attribute"
+              value="strength"
+            />Strength</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="attribute"
+              value="speed"
+            />Speed</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="attribute"
+              value="durability"
+            />Durability</label
+          >
+        </div>
+        <div class="point-allocation">
+          <h3>Allocate Your Points:</h3>
+          <div class="point-slider">
+            <label for="strength-slider">Strength Points:</label>
+            <input
+              type="range"
+              id="strength-slider"
+              name="strength-points"
+              min="0"
+              max="10"
+              value="0"
+              onchange="updatePoints()"
+            />
+            <span class="slider-value">0</span>
+          </div>
+          <div class="point-slider">
+            <label for="speed-slider">Speed Points:</label>
+            <input
+              type="range"
+              id="speed-slider"
+              name="speed-points"
+              min="0"
+              max="10"
+              value="0"
+              onchange="updatePoints()"
+            />
+            <span class="slider-value">0</span>
+          </div>
+          <div class="point-slider">
+            <label for="durability-slider">Durability Points:</label>
+            <input
+              type="range"
+              id="durability-slider"
+              name="durability-points"
+              min="0"
+              max="10"
+              value="0"
+              onchange="updatePoints()"
+            />
+            <span class="slider-value">0</span>
+          </div>
+        </div>
+        <textarea
+          id="power-description"
+          rows="5"
+          placeholder="Write Your Power Description"
+        ></textarea>
+        <button onclick="savePower()">Save Power</button>
+      </section>
+      <section id="share-section">
+        <h2>Share Your Superhero</h2>
+        <div class="share-area"></div>
+        <textarea
+          id="story-description"
+          rows="10"
+          placeholder="Write Your Superhero Story"
+        ></textarea>
+        <button onclick="saveStory()">Save Story</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bowlby+One+SC&display=swap');
+
+body {
+    font-family: 'Bowlby One SC', sans-serif;
+    background-color: #0252a9;
+    color: white;
+}
+
+.banner h1 {
+    font-family: 'Bangers';
+    font-size: 48px;
+    text-shadow: 2px 2px #01407e;
+}
+
+nav li {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+    border-color: white;
+}
+
+section {
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.color-selection label,
+.pattern-selection label,
+.accessory-selection label {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.accessory-selection label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    font-family: 'Bangers', sans-serif;
+    font-size: 24px;
+    background-color: #01407e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #0252a9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.preview-area {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid #01407e;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.point-slider input[type="range"] {
+    width: 75%;
+    margin: 10px 0;
+}
+
+.slider-value {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.share-area {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.share-card {
+    background-color: #01407e;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    width: 200px;
+}
+
+.share-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.share-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.share-card img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
